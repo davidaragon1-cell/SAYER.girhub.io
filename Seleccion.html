@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinturas "SAYER-Confy"</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #d8fff0;
+           background-color: white;
+        }
+        button {
+            position: relative;
+        }
+        header {
+            background-color: #004c98;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #003366;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        nav a:hover {
+            background-color: #002244;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .menu {
+            list-style: none;
+            display: flex;
+        }
+        .menu li {
+            margin: 0 15px;
+        }
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .menu a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                text-align: center;
+            }
+            .menu {
+                flex-direction: column;
+                padding-top: 10px;
+            }
+            .menu li {
+                margin: 10px 0;
+            }
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+        .paint {
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .color-box {
+            width: 100px;
+            height: 100px;
+            margin: auto;
+            border-radius: 10px;
+        }
+        .price {
+            font-weight: bold;
+            color: #d9534f;
+        }
+        footer {
+            background-color: #004c98;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>PINTURAS "SAYER-CONFY"</h1>
+        <p>Los colores son otro pretexto para sacarte una sonrisa</p>
+    </header>
+    <nav>
+        <a href="prueba.html">Inicio</a>
+        <a href="correo .html">Formulario</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+    <div class="container">
+        <div class="paint">
+            <div class="color-box" style="background-image: url(pintura\ roja.jpg);"></div>
+            <p>pintura roja</p>
+            <p>5 litros</p>
+            <p class="price">$499</p>
+        </div>
+        <div class="paint">
+            <div class="color-box" style="background-image: url(pintura\ azul.jpg);"></div>
+            <p>Pintura azul </p>
+            <p>Clasica 5 litros</p>
+            <p class="price">$499</p>
+        </div>
+        <div class="paint">
+            <div class="color-box" style="background-image: url(pintura\ azul.jpg);"></div>
+            <p>pintura amarilla</p>
+            <p>5 litros</p>
+            <p class="price">$999</p>
+        </div>
+        <div class="paint">
+            <div class="color-box" style="background-image: url(pintura\ roja.jpg);"></div>
+            <p>Pintura verde</p>
+            <p>5 litros</p>
+            <p class="price">$499</p>
+        </div>
+        <div class="paint">
+            <div class="color-box" style="background-image: url(pintura\ azul.jpg);"></div>
+            <p>Pintura Naranja</p>
+            <p>5 litros</p>
+            <p class="price">$499</p>
+        </div>
+        <div class="paint">
+            <div class="color-box" style="background-image: url(pintura\ roja.jpg);"></div>
+            <p>Pintura morada</p>
+            <p>5 litros</p>
+            <p class="price">$499</p>
+        </div>
+        <div class="paint">
+            <div class="color-box" style="background-image: url(pintura\ roja.jpg);"></div>
+            <p>Pintura rosa</p>
+            <p>5 litros</p>
+            <p class="price">$499</p>
+        </div>
+        <div class="paint">
+            <div class="color-box" style="background-image: url(pintura\ azul.jpg);"></div>
+            <p>pintura marron</p>
+            <p>5 litros</p>
+            <p class="price">$499</p>
+        </div>
+        <div class="paint">
+            <div class="color-box" style="background-image: url(pintura\ roja.jpg);"></div>
+            <p>Impermeabilizante</p>
+            <p>5 litros</p>
+            <p class="price">$999</p>
+        </div>
+        <div class="paint">
+            <div class="color-box" style="background-image: url(pintura\ azul.jpg);"></div>
+            <p>Pintura negra</p>
+            <p>5 litros</p>
+            <p class="price">$499</p>
+        </div>
+        <div class="paint">
+            <div class="color-box" style="background-image: url(pintura\ roja.jpg); border: 1px solid #ccc;"></div>
+            <p>Sellador</p>
+            <p>5 litros</p>
+            <p class="price">$999</p>
+        </div>
+        <div class="paint">
+            <div class="color-box" style="background-image: url(pintura\ azul.jpg);"></div>
+            <p>pintura celeste</p>
+            <p>5 litros</p>
+            <p class="price">$499</p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Confy. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
