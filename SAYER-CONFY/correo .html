@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgb(14, 216, 189);
+        }
+       
+        .container {
+            background: white;
+            padding: 60px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        input, button {
+            display: block;
+            width: 100%;
+            margin-top: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            background-color: palevioletred;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #c71585;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Formulario</h2>
+        <form id="formulario">
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" required placeholder="Ej. Juan Pérez">
+            
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required placeholder="Ej. correo@ejemplo.com">
+            
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" required placeholder="Ej. Calle 123, Ciudad">
+            
+            <label for="fecha_nacimiento">Fecha de nacimiento:</label>
+            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+            
+            <label for="telefono">Número telefónico:</label>
+            <input type="tel" id="telefono" name="telefono" required maxlength="10" pattern="[0-9]{10}" placeholder="Ej. 5551234567">
+            
+            <label for="correo_destino">Enviar a (correo destino):</label>
+            <input type="email" id="correo_destino" name="correo_destino" required placeholder="Ej. destino@correo.com">
+            
+            <button type="button" onclick="enviarCorreo()">Ingresar</button>
+        </form>
+    </div>
+
+    <script>
+        function enviarCorreo() {
+            let nombre = document.getElementById("nombre").value;
+            let email = document.getElementById("email").value;
+            let direccion = document.getElementById("direccion").value;
+            let fechaNacimiento = document.getElementById("fecha_nacimiento").value;
+            let telefono = document.getElementById("telefono").value;
+            let correoDestino = document.getElementById("correo_destino").value;
+
+            if (!correoDestino) {
+                alert("Por favor, ingresa un correo de destino.");
+                return;
+            }
+
+            let asunto = "Formulario de Registro";
+            let cuerpo = `Nombre: ${nombre}%0D%0A
+                          Correo: ${email}%0D%0A
+                          Dirección: ${direccion}%0D%0A
+                          Fecha de nacimiento: ${fechaNacimiento}%0D%0A
+                          Teléfono: ${telefono}`;
+
+            window.location.href = `mailto:${correoDestino}?subject=${asunto}&body=${cuerpo}`;
+        }
+    </script>
+</body>
+</html>
